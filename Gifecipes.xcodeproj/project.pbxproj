@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7605C34AF910C6E00DAE5CF /* Pods_Gifecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F77BC93999F02D5CBFE406D7 /* Pods_Gifecipes.framework */; };
 		EF2B665E1E68AAFF0018EED4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B665D1E68AAFF0018EED4 /* AppDelegate.swift */; };
-		EF2B66601E68AAFF0018EED4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B665F1E68AAFF0018EED4 /* ViewController.swift */; };
 		EF2B66631E68AAFF0018EED4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2B66611E68AAFF0018EED4 /* Main.storyboard */; };
 		EF2B66651E68AAFF0018EED4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2B66641E68AAFF0018EED4 /* Assets.xcassets */; };
 		EF2B66681E68AAFF0018EED4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2B66661E68AAFF0018EED4 /* LaunchScreen.storyboard */; };
+		EFA26AD91E68B11B0084CFC8 /* GifTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA26AD81E68B11B0084CFC8 /* GifTableViewController.swift */; };
+		EFA26ADB1E68B18F0084CFC8 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA26ADA1E68B18F0084CFC8 /* Gif.swift */; };
+		EFA26ADD1E68B2AE0084CFC8 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA26ADC1E68B2AE0084CFC8 /* GifView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20EC17B524F61107511443DF /* Pods-Gifecipes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifecipes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gifecipes/Pods-Gifecipes.debug.xcconfig"; sourceTree = "<group>"; };
+		4BF2F362E7C76C181E78491F /* Pods-Gifecipes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifecipes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gifecipes/Pods-Gifecipes.release.xcconfig"; sourceTree = "<group>"; };
 		EF2B665A1E68AAFF0018EED4 /* Gifecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gifecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2B665D1E68AAFF0018EED4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF2B665F1E68AAFF0018EED4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF2B66621E68AAFF0018EED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF2B66641E68AAFF0018EED4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF2B66671E68AAFF0018EED4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF2B66691E68AAFF0018EED4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFA26AD81E68B11B0084CFC8 /* GifTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifTableViewController.swift; sourceTree = "<group>"; };
+		EFA26ADA1E68B18F0084CFC8 /* Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		EFA26ADC1E68B2AE0084CFC8 /* GifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
+		F77BC93999F02D5CBFE406D7 /* Pods_Gifecipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gifecipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7605C34AF910C6E00DAE5CF /* Pods_Gifecipes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		127849CAD9C526D2D4C4D30D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20EC17B524F61107511443DF /* Pods-Gifecipes.debug.xcconfig */,
+				4BF2F362E7C76C181E78491F /* Pods-Gifecipes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF2B66511E68AAFE0018EED4 = {
 			isa = PBXGroup;
 			children = (
 				EF2B665C1E68AAFF0018EED4 /* Gifecipes */,
 				EF2B665B1E68AAFF0018EED4 /* Products */,
+				127849CAD9C526D2D4C4D30D /* Pods */,
+				F0FCBE647E7C8B205C32D5C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +75,39 @@
 			isa = PBXGroup;
 			children = (
 				EF2B665D1E68AAFF0018EED4 /* AppDelegate.swift */,
-				EF2B665F1E68AAFF0018EED4 /* ViewController.swift */,
+				EFA26AD81E68B11B0084CFC8 /* GifTableViewController.swift */,
+				EFA26ADF1E68B7DB0084CFC8 /* Model */,
+				EFA26ADE1E68B4610084CFC8 /* View */,
 				EF2B66611E68AAFF0018EED4 /* Main.storyboard */,
 				EF2B66641E68AAFF0018EED4 /* Assets.xcassets */,
 				EF2B66661E68AAFF0018EED4 /* LaunchScreen.storyboard */,
 				EF2B66691E68AAFF0018EED4 /* Info.plist */,
 			);
 			path = Gifecipes;
+			sourceTree = "<group>";
+		};
+		EFA26ADE1E68B4610084CFC8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFA26ADC1E68B2AE0084CFC8 /* GifView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EFA26ADF1E68B7DB0084CFC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFA26ADA1E68B18F0084CFC8 /* Gif.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F0FCBE647E7C8B205C32D5C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F77BC93999F02D5CBFE406D7 /* Pods_Gifecipes.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +117,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF2B666C1E68AAFF0018EED4 /* Build configuration list for PBXNativeTarget "Gifecipes" */;
 			buildPhases = (
+				01A70220D49C3F0569ABC4B1 /* [CP] Check Pods Manifest.lock */,
 				EF2B66561E68AAFE0018EED4 /* Sources */,
 				EF2B66571E68AAFE0018EED4 /* Frameworks */,
 				EF2B66581E68AAFE0018EED4 /* Resources */,
+				A5507F1A2DE5649FDFE7DDC9 /* [CP] Embed Pods Frameworks */,
+				71ED129AB680C8D7B35C982D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +181,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01A70220D49C3F0569ABC4B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		71ED129AB680C8D7B35C982D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gifecipes/Pods-Gifecipes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5507F1A2DE5649FDFE7DDC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gifecipes/Pods-Gifecipes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF2B66561E68AAFE0018EED4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF2B66601E68AAFF0018EED4 /* ViewController.swift in Sources */,
+				EFA26AD91E68B11B0084CFC8 /* GifTableViewController.swift in Sources */,
+				EFA26ADD1E68B2AE0084CFC8 /* GifView.swift in Sources */,
 				EF2B665E1E68AAFF0018EED4 /* AppDelegate.swift in Sources */,
+				EFA26ADB1E68B18F0084CFC8 /* Gif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +356,7 @@
 		};
 		EF2B666D1E68AAFF0018EED4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20EC17B524F61107511443DF /* Pods-Gifecipes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y38T3TH9N8;
@@ -270,6 +370,7 @@
 		};
 		EF2B666E1E68AAFF0018EED4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BF2F362E7C76C181E78491F /* Pods-Gifecipes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y38T3TH9N8;
@@ -300,6 +401,7 @@
 				EF2B666E1E68AAFF0018EED4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
