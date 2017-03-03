@@ -10,7 +10,7 @@ import UIKit
 
 class GifTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var gifImageView: UIImageView!
+    @IBOutlet weak var gifImageView: GifView!
     
     var gif: Gif?
     

@@ -25,7 +25,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVk-MO-0gT">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVk-MO-0gT" customClass="GifView" customModule="Gifecipes" customModuleProvider="target">
                                             <rect key="frame" x="8" y="8" width="359" height="103.5"/>
                                         </imageView>
                                     </subviews>
@@ -37,7 +37,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="gifImageView" destination="eVk-MO-0gT" id="8gu-hZ-V9D"/>
+                                    <outlet property="gifImageView" destination="eVk-MO-0gT" id="DIh-7z-UWH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
