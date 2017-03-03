@@ -40,16 +40,10 @@ extension GifTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let gif = gifs[indexPath.row]
+        let heightRatio = (Float(gif.height) / Float(gif.width)) // must be float to get precision
+        let height = (Float(gif.height) * heightRatio) + 16
         
-//        print(indexPath.row)
-//        print(gif.height)
-//        print(gif.width)
-//        print("")
-        
-        let heightRatio = (gif.height / gif.width)
-        let height = (gif.height * heightRatio) + 16
-        
-        return CGFloat(integerLiteral: height)
+        return CGFloat(integerLiteral: Int(height))
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

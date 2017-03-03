@@ -25,9 +25,9 @@ class Gif {
         self.name = name
         self.id = id
         self.url = url
-        print(height)
-        print(width)
-        print("")
+//        print(height)
+//        print(width)
+//        print("")
         self.height = height
         self.width = width
     }
