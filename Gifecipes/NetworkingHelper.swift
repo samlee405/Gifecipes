@@ -40,7 +40,7 @@ extension NetworkingHelper {
     }
     
     func getImageList(page: Int, completion: @escaping ([Gif]) -> Void) {
-        Alamofire.request(baseURL + "3/gallery/r/gifrecipes", headers: header).responseJSON { response in
+        Alamofire.request(baseURL + "3/gallery/r/gifrecipes/\(page)", headers: header).responseJSON { response in
             switch response.result {
             case .success:
                 let data = JSON(response.result.value!)
@@ -67,7 +67,7 @@ extension NetworkingHelper {
 extension NetworkingHelper {
     
     func getThumbnail(gif: Gif, completion: @escaping (Data) -> Void) {
-        Alamofire.request(baseURL + gif.id + "t.jpg", headers: header).responseData { (response) in
+        Alamofire.request(baseURL + gif.id + "m.jpg", headers: header).responseData { (response) in
             switch response.result {
             case .success:
                 let data = response.result.value!

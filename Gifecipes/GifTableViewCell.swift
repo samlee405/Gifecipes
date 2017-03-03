@@ -13,23 +13,23 @@ class GifTableViewCell: UITableViewCell {
     @IBOutlet weak var gifImageView: GifView!
     
     var gif: Gif?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 }
 
 // MARK: - UI updates
 extension GifTableViewCell {
+//    func updateImageViewSize() {
+//        if let unwrappedGif = gif {
+//            let heightRatio = (unwrappedGif.height / unwrappedGif.width)
+//            gifImageView.frame.height *= heightRatio
+//        }
+//    }
+    
     func getThumbnail() {
         if let unwrappedGif = gif {
             NetworkingHelper.sharedInstance.getThumbnail(gif: unwrappedGif, completion: updateThumbnail)
         }
     }
-}
 
-//MARK: - Networking completion handlers
-extension GifTableViewCell {
     func updateThumbnail(data: Data) {
         gif!.thumbnail = UIImage(data: data)
         gifImageView.image = gif?.thumbnail

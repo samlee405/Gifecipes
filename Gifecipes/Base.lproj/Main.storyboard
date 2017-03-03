@@ -28,11 +28,20 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVk-MO-0gT" customClass="GifView" customModule="Gifecipes" customModuleProvider="target">
                                             <rect key="frame" x="8" y="8" width="359" height="103.5"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jz-Kk-gvY">
+                                            <rect key="frame" x="8" y="81" width="46" height="30"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <state key="normal" title="Play">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="eVk-MO-0gT" firstAttribute="leading" secondItem="X9f-Y0-7NW" secondAttribute="leading" constant="8" id="4E8-uT-rl5"/>
                                         <constraint firstItem="eVk-MO-0gT" firstAttribute="top" secondItem="X9f-Y0-7NW" secondAttribute="top" constant="8" id="5Dq-SA-17F"/>
+                                        <constraint firstItem="9jz-Kk-gvY" firstAttribute="leading" secondItem="eVk-MO-0gT" secondAttribute="leading" id="MVq-hL-XbP"/>
                                         <constraint firstAttribute="trailing" secondItem="eVk-MO-0gT" secondAttribute="trailing" constant="8" id="UAf-rS-JEt"/>
+                                        <constraint firstItem="9jz-Kk-gvY" firstAttribute="bottom" secondItem="eVk-MO-0gT" secondAttribute="bottom" id="avS-SA-drD"/>
                                         <constraint firstAttribute="bottom" secondItem="eVk-MO-0gT" secondAttribute="bottom" constant="8" id="qzg-No-jde"/>
                                     </constraints>
                                 </tableViewCellContentView>
