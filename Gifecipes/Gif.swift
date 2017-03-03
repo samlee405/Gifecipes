@@ -10,11 +10,21 @@ import Foundation
 import UIKit
 
 struct Gif {
-    let gifURL: String
-    var gifThumbnail: UIImage?
-    var gifFile: GifView?
+    let name: String
+    let id: String
+    let url: String
     
-    init(url: String) {
-        self.gifURL = url
+    let height: Int
+    let width: Int
+    
+    var thumbnail: UIImage?
+    var file: GifView?
+    
+    init(name: String, id: String, url: String, height: Int, width: Int) {
+        self.name = name
+        self.id = id
+        self.url = url
+        self.height = height
+        self.width = width
     }
 }

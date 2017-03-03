@@ -15,6 +15,9 @@
 		EFA26AD91E68B11B0084CFC8 /* GifTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA26AD81E68B11B0084CFC8 /* GifTableViewController.swift */; };
 		EFA26ADB1E68B18F0084CFC8 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA26ADA1E68B18F0084CFC8 /* Gif.swift */; };
 		EFA26ADD1E68B2AE0084CFC8 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA26ADC1E68B2AE0084CFC8 /* GifView.swift */; };
+		EFA26AE11E68BEE00084CFC8 /* GifTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA26AE01E68BEE00084CFC8 /* GifTableViewCell.swift */; };
+		EFA26AE51E68C0F90084CFC8 /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA26AE41E68C0F90084CFC8 /* NetworkingHelper.swift */; };
+		EFA26AE81E68D6B60084CFC8 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFA26AE71E68D6B60084CFC8 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		EFA26AD81E68B11B0084CFC8 /* GifTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifTableViewController.swift; sourceTree = "<group>"; };
 		EFA26ADA1E68B18F0084CFC8 /* Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		EFA26ADC1E68B2AE0084CFC8 /* GifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
+		EFA26AE01E68BEE00084CFC8 /* GifTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifTableViewCell.swift; sourceTree = "<group>"; };
+		EFA26AE41E68C0F90084CFC8 /* NetworkingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
+		EFA26AE71E68D6B60084CFC8 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		F77BC93999F02D5CBFE406D7 /* Pods_Gifecipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gifecipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,13 +81,15 @@
 			isa = PBXGroup;
 			children = (
 				EF2B665D1E68AAFF0018EED4 /* AppDelegate.swift */,
-				EFA26AD81E68B11B0084CFC8 /* GifTableViewController.swift */,
+				EFA26AE31E68C0E60084CFC8 /* Networking */,
+				EFA26AE21E68BEE50084CFC8 /* Controller */,
 				EFA26ADF1E68B7DB0084CFC8 /* Model */,
 				EFA26ADE1E68B4610084CFC8 /* View */,
 				EF2B66611E68AAFF0018EED4 /* Main.storyboard */,
 				EF2B66641E68AAFF0018EED4 /* Assets.xcassets */,
 				EF2B66661E68AAFF0018EED4 /* LaunchScreen.storyboard */,
 				EF2B66691E68AAFF0018EED4 /* Info.plist */,
+				EFA26AE61E68D6990084CFC8 /* Support Files */,
 			);
 			path = Gifecipes;
 			sourceTree = "<group>";
@@ -100,6 +108,31 @@
 				EFA26ADA1E68B18F0084CFC8 /* Gif.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		EFA26AE21E68BEE50084CFC8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EFA26AD81E68B11B0084CFC8 /* GifTableViewController.swift */,
+				EFA26AE01E68BEE00084CFC8 /* GifTableViewCell.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EFA26AE31E68C0E60084CFC8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EFA26AE41E68C0F90084CFC8 /* NetworkingHelper.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		EFA26AE61E68D6990084CFC8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFA26AE71E68D6B60084CFC8 /* Keys.plist */,
+			);
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 		F0FCBE647E7C8B205C32D5C2 /* Frameworks */ = {
@@ -173,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA26AE81E68D6B60084CFC8 /* Keys.plist in Resources */,
 				EF2B66681E68AAFF0018EED4 /* LaunchScreen.storyboard in Resources */,
 				EF2B66651E68AAFF0018EED4 /* Assets.xcassets in Resources */,
 				EF2B66631E68AAFF0018EED4 /* Main.storyboard in Resources */,
@@ -237,6 +271,8 @@
 				EFA26AD91E68B11B0084CFC8 /* GifTableViewController.swift in Sources */,
 				EFA26ADD1E68B2AE0084CFC8 /* GifView.swift in Sources */,
 				EF2B665E1E68AAFF0018EED4 /* AppDelegate.swift in Sources */,
+				EFA26AE51E68C0F90084CFC8 /* NetworkingHelper.swift in Sources */,
+				EFA26AE11E68BEE00084CFC8 /* GifTableViewCell.swift in Sources */,
 				EFA26ADB1E68B18F0084CFC8 /* Gif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
