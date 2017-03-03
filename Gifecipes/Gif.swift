@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-struct Gif {
+class Gif {
+    
     let name: String
     let id: String
     let url: String

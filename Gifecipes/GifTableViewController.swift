@@ -6,25 +6,35 @@
 //  Copyright © 2017 Sam Lee. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import Alamofire //remove after abstraction
 
 class GifTableViewController: UITableViewController {
     
-    var gifURLs: [Gif] = []
-    
-    // MARK: - Lifecycle
+    var gifs: [Gif] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NetworkingHelper.sharedInstance.getImageList(page: 1, completion: addImages)
+        NetworkingHelper.sharedInstance.getImageList(page: 1, completion: addNewGifs)
     }
 }
 
-// MARK: - Class functions
+// MARK: - Networking completion handlers
 extension GifTableViewController {
-    func addImages(gifs: [Gif]) {
-        gifURLs += gifs
+    
+    func addNewGifs(newGifs: [Gif]) {
+        self.gifs += newGifs
+        tableView.reloadData()
+    }
+    
+    func assignImage(cell: GifTableViewCell) {
+//        cell.gifImageView.image
+    }
+    
+    func updateView() {
+        tableView.reloadData()
     }
 }
 
@@ -32,13 +42,41 @@ extension GifTableViewController {
 extension GifTableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gifURLs.count
+        return gifs.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gifTableViewCell", for: indexPath) as! GifTableViewCell
-
-        // Configure the cell...
+        
+        cell.gif = gifs[indexPath.row]
+        print(cell.gif!.url)
+//        cell.getThumbnail()
+        
+        let header = ["Authorization" : "Client-ID d0125fa9cea3685"]
+        Alamofire.request("https://api.imgur.com/" + cell.gif!.id + "m.gif", headers: header).responseData { (response) in
+            switch response.result {
+            case .success:
+                let data = response.result.value!
+                DispatchQueue.main.async {
+                    cell.gifImageView.image = UIImage(data: data)
+                }
+                
+            case .failure(let error):
+                print("An error occurred: \(error)")
+            }
+        }
+//        let url = URL(string: "https://api.imgur.com/" + cell.gif!.id)
+//        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
+//            guard let data = data, error == nil else {
+//                return
+//            }
+//            print(response)
+//            
+//            DispatchQueue.main.async() {
+//                cell.gifImageView.image = UIImage(data: data)
+//            }
+//        }
+//        task.resume()
 
         return cell
     }

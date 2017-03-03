@@ -9,16 +9,29 @@
 import UIKit
 
 class GifTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var gifImageView: UIImageView!
+    
+    var gif: Gif?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+// MARK: - UI updates
+extension GifTableViewCell {
+    func getThumbnail() {
+        if let unwrappedGif = gif {
+            NetworkingHelper.sharedInstance.getThumbnail(gif: unwrappedGif, completion: updateThumbnail)
+        }
     }
+}
 
+//MARK: - Networking completion handlers
+extension GifTableViewCell {
+    func updateThumbnail(data: Data) {
+        gif!.thumbnail = UIImage(data: data)
+        gifImageView.image = gif?.thumbnail
+    }
 }

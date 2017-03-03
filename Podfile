@@ -7,6 +7,6 @@ target 'Gifecipes' do
   # Pods for Gifecipes
   pod 'Alamofire'
   pod 'SwiftyJSON'
-  pod ‘Gifu’
+  pod 'Gifu'
 
 end

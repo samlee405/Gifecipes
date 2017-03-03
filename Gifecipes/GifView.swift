@@ -11,6 +11,7 @@ import UIKit
 import Gifu
 
 class GifView: UIImageView, GIFAnimatable {
+    
     public lazy var animator: Animator? = {
         return Animator(withDelegate: self)
     }()

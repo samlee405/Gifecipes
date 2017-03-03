@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gifTableViewCell" rowHeight="120" id="g2k-Kf-BSX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gifTableViewCell" rowHeight="120" id="g2k-Kf-BSX" customClass="GifTableViewCell" customModule="Gifecipes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g2k-Kf-BSX" id="X9f-Y0-7NW">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVk-MO-0gT" customClass="GifView" customModule="Gifu">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVk-MO-0gT">
                                             <rect key="frame" x="8" y="8" width="359" height="103.5"/>
                                         </imageView>
                                     </subviews>
@@ -36,6 +36,9 @@
                                         <constraint firstAttribute="bottom" secondItem="eVk-MO-0gT" secondAttribute="bottom" constant="8" id="qzg-No-jde"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gifImageView" destination="eVk-MO-0gT" id="8gu-hZ-V9D"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

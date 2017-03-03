@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class NetworkingHelper {
+    
     static let sharedInstance = NetworkingHelper()
     
     // Networking parameters
@@ -33,6 +34,7 @@ class NetworkingHelper {
 
 // Getting basic data
 extension NetworkingHelper {
+    
     func getImageURL(url: String) {
         
     }
@@ -61,6 +63,22 @@ extension NetworkingHelper {
     }
 }
 
+// MARK: - Getting image files
 extension NetworkingHelper {
     
+    func getThumbnail(gif: Gif, completion: @escaping (Data) -> Void) {
+        Alamofire.request(baseURL + gif.id, headers: header).responseData { (response) in
+            switch response.result {
+            case .success:
+                let data = response.result.value!
+                completion(data)
+            case .failure(let error):
+                print("An error occurred: \(error)")
+            }
+        }
+    }
+    
+    func getGif() {
+        
+    }
 }
