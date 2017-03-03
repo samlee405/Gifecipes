@@ -49,34 +49,7 @@ extension GifTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gifTableViewCell", for: indexPath) as! GifTableViewCell
         
         cell.gif = gifs[indexPath.row]
-        print(cell.gif!.url)
-//        cell.getThumbnail()
-        
-        let header = ["Authorization" : "Client-ID d0125fa9cea3685"]
-        Alamofire.request("https://api.imgur.com/" + cell.gif!.id + "m.gif", headers: header).responseData { (response) in
-            switch response.result {
-            case .success:
-                let data = response.result.value!
-                DispatchQueue.main.async {
-                    cell.gifImageView.image = UIImage(data: data)
-                }
-                
-            case .failure(let error):
-                print("An error occurred: \(error)")
-            }
-        }
-//        let url = URL(string: "https://api.imgur.com/" + cell.gif!.id)
-//        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
-//            guard let data = data, error == nil else {
-//                return
-//            }
-//            print(response)
-//            
-//            DispatchQueue.main.async() {
-//                cell.gifImageView.image = UIImage(data: data)
-//            }
-//        }
-//        task.resume()
+        cell.getThumbnail()
 
         return cell
     }

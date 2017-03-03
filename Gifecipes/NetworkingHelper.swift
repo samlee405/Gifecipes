@@ -67,7 +67,7 @@ extension NetworkingHelper {
 extension NetworkingHelper {
     
     func getThumbnail(gif: Gif, completion: @escaping (Data) -> Void) {
-        Alamofire.request(baseURL + gif.id, headers: header).responseData { (response) in
+        Alamofire.request(baseURL + gif.id + "t.jpg", headers: header).responseData { (response) in
             switch response.result {
             case .success:
                 let data = response.result.value!
